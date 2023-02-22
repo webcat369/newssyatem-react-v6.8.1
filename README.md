@@ -43,3 +43,6 @@ npm run build
 * react-router-dom: "^6.8.1"（最新）,
 * react: "^18.2.0",
 * react-dom: "^18.2.0"
+* redux: "^4.2.1"
+* react-redux: "^8.0.5"
+* recoil: "^0.7.6"
