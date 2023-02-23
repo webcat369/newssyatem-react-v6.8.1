@@ -10,7 +10,9 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom'
-import { ConfigProvider } from 'antd'
+import { ConfigProvider, theme} from 'antd'
+import { useAntdTheme } from './../hook/useAntdTheme'
+import useTheme from '../hook/useTheme'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,8 +27,10 @@ const router = createBrowserRouter(
 )
 
 export default function Router () {
+  const {theme} = useTheme()
+  const themeConfig = useAntdTheme(theme)
   return (
-    <ConfigProvider>
+    <ConfigProvider theme={themeConfig}>
       <RouterProvider router={router}/>
     </ConfigProvider>
   );
