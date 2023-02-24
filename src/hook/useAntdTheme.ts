@@ -8,7 +8,7 @@ export const useAntdTheme = (val:string):ThemeConfig => {
       algorithm: theme.defaultAlgorithm,
       token: {colorPrimary: '#0256FF'}
     }
-  }else if(val === 'drak'){
+  }else if(val === 'dark'){
     themeConfig = {
       algorithm: theme.darkAlgorithm,
       token: {colorPrimary: '#0256FF'}

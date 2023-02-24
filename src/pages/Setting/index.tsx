@@ -9,7 +9,7 @@ export default function Setting (props: Props) {
   return (
     <div style={{display:'flex'}}>
       <Button type="primary" onClick={() => {changeTheme('light')}}>亮色</Button>
-      <Button onClick={() => {changeTheme('drak')}}>暗色</Button>
+      <Button onClick={() => {changeTheme('dark')}}>暗色</Button>
     </div>
   );
 }

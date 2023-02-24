@@ -13,9 +13,9 @@ const { Header, Sider, Content } = Layout;
 
 export default function App() {
   const [collapsed, setCollapsed] = useState(false);
-  const {
-    token: { colorBgContainer,colorFill,colorText },
-  } = theme.useToken();
+  // const {
+  //   token: { colorBgContainer,colorFill,colorText },
+  // } = theme.useToken();
   const navigate = useNavigate()
 
   // 截取当前URL路径
@@ -33,9 +33,9 @@ export default function App() {
 
   return (
     <Layout className='pages'>
-      <Sider trigger={null} collapsible collapsed={collapsed} style={{background: colorBgContainer}}>
+      <Sider trigger={null} collapsible collapsed={collapsed} className='bg_container'>
         <div style={{ display: "flex", height: "100%", flexDirection: 'column' }}>
-          <div className="logo" style={{background:colorFill,color:colorText}}>新闻发布后台管理系统</div>
+          <div className="logo fill_color" >新闻发布后台管理系统</div>
           <div style={{ flex: 1, overflow: 'auto' }}>
             <Menu
               mode="inline"
@@ -70,13 +70,13 @@ export default function App() {
         </div>
       </Sider>
       <Layout className='main'>
-        <Header style={{ background: colorBgContainer }}>header</Header>
-        <Content style={{
+        <Header className='bg_container'>header</Header>
+        <Content 
+          className='bg_container color_txt'
+          style={{
             margin: '24px 16px',
             padding: 24,
             minHeight: 280,
-            background: colorBgContainer,
-            color:colorText
           }}>
           <Outlet/>
         </Content>

@@ -10,7 +10,7 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom'
-import { ConfigProvider, theme} from 'antd'
+import { ConfigProvider} from 'antd'
 import { useAntdTheme } from './../hook/useAntdTheme'
 import useTheme from '../hook/useTheme'
 
