@@ -5,6 +5,8 @@ import {
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
 } from '@ant-design/icons';
 import '../assets/css/App.css'
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -28,8 +30,11 @@ export default function App() {
     console.log(item.key,'路由映射');
     
     navigate(item.key)
-  };
+  }
 
+  const changeCollapsed = () => {
+    setCollapsed(!collapsed)
+  }
 
   return (
     <Layout className='pages'>
@@ -70,7 +75,9 @@ export default function App() {
         </div>
       </Sider>
       <Layout className='main'>
-        <Header className='bg_container'>header</Header>
+        <Header className='bg_container'>
+          {collapsed ? <MenuUnfoldOutlined onClick={changeCollapsed} /> : <MenuFoldOutlined onClick={changeCollapsed} />}
+        </Header>
         <Content 
           className='bg_container color_txt'
           style={{
